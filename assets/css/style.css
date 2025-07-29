@@ -1,0 +1,208 @@
+/* reset by rafaux */
+* { margin: 0px; padding: 0px; border: 0px; font-weight: normal; font-size: 100%; list-style: none; line-height: 1; outline: 0px; background: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; font-smoothing: antialiased; }
+
+/* var */
+:root { --primary: #151515; --primary2: #3B3B3B; --whitegray: #DDE2E9; --gray: #1A1D2114; --green: #3DB822; --red: #e73f5d; --watermelon: #E73F5D; }
+
+/* global class */
+.container { display: block; width: auto; max-width: 1100px; height: auto; margin: 0px auto; }
+
+/* base */
+a { text-decoration: none; transition: all .5s ease; }
+body { background: #FAFAFA; color: var(--primary); font: normal 15px 'Noto Sans', sans-serif; overflow-x: hidden; }
+input, textarea, select, button { font: normal 15px 'Noto Sans', sans-serif; appearance: none; -webkit-appearance: none; border-radius: 0px; transition: all .3s ease; }
+select, button { cursor: pointer; }
+input[type=submit], button { transition: all .5s ease; }
+
+/* flex */
+.flex { display: flex; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }
+
+/* grid */
+.grid { display: grid; }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+.grid-1-150 { grid-template-columns: 1fr 150px; }
+.grid-1-350 { grid-template-columns: 1fr 350px; grid-gap: 16px; }
+
+/* styles */
+.mt-20 { margin-top: 20px; }
+
+/* countdown */
+#countdown { margin-bottom: 40px; padding: 24px 0px; background-color: var(--primary); }
+#countdown .flex { gap: 70px; }
+#countdown p { font-weight: 600; font-size: 24px; color: #fff; line-height: 1.4; }
+#countdown span.ct { display: flex; gap: 16px; width: 240px; }
+#countdown span.ct span { display: flex; flex-direction: column; gap: 5px; text-align: center; }
+#countdown span.ct span strong { width: 70px; height: 60px; border-radius: 12px; background-color: #C6DD88; font-weight: 700; font-size: 32px; line-height: 60px; }
+#countdown span.ct span small { color: #fff; }
+#countdown button { width: 210px; height: 60px; background-color: var(--green); color: #fff; text-align: center; line-height: 60px; font-weight: 600; font-size: 22px; flex-shrink: 0; border-radius: 6px; }
+#countdown button:hover { background-color: #60e144; }
+
+/* countdown minutes */
+#countdown-minutes { display: flex; align-items: center; justify-content: center; gap: 30px; margin-bottom: 20px; padding: 24px 0px; background-color: var(--red); }
+#countdown-minutes span { gap: 15px; }
+#countdown-minutes .separator { animation: fade .9s infinite alternate; }
+#countdown-minutes b,
+#countdown-minutes strong { font-weight: 00; font-size: 19px; color: #fff; }
+@keyframes fade { from { opacity: 1; } to { opacity: 0; } }
+
+/* form */
+#form header { width: 350px; height: 150px; margin-bottom: 40px; border: 1px solid #BDBDBD; }
+#form header figure { width: auto; max-width: 250px; }
+#form header figure img { width: 100%; }
+#form fieldset { width: 740px; margin-bottom: 24px; background-color: #fff; border-radius: 12px; border: 1px solid #BDBDBD; box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05); overflow: hidden; }
+#form fieldset span.head { display: block; padding: 20px 32px; background-color: #F3F3F3; color: var(--primary2); font-weight: 600; font-size: 20px; }
+#form fieldset .content { padding: 32px; }
+#form fieldset .content .grid { gap: 40px; margin-bottom: 20px; row-gap: 24px; }
+#form fieldset .content .grid:last-of-type { margin-bottom: 0px; }
+#form fieldset .content .grid.grid-3 { gap: 16px; margin-bottom: 20px; }
+#form fieldset .content label { display: flex; flex-direction: column; gap: 8px; }
+#form fieldset .content label strong { font-size: 12px; }
+#form fieldset .content label input { width: 100%; height: 60px; padding: 0px 20px; border: 1px solid #ccc; border-radius: 8px; font-size: 14px; }
+#form fieldset .content label input:focus,
+#form fieldset .content label input:active { border-color: var(--primary); }
+#form fieldset .content label select { width: 100%; height: 60px; padding: 0px 20px; border: 1px solid #999; border-radius: 8px; background: transparent url('../img/select.svg') no-repeat center right 15px; color: #666; font-size: 14px; }
+#form fieldset .content h3 { display: block; margin-bottom: 10px; font-weight: 600; font-size: 20px; color: var(--primary2); }
+#form fieldset .content .metodo-envio p { display: block; margin-bottom: 24px; color: var(--primary2); }
+#form fieldset .content .metodo-envio label { width: 100%; flex-direction: row; font-size: 18px; }
+#form fieldset .content .metodo-envio label:first-of-type { margin-bottom: 16px; }
+#form fieldset .content .metodo-envio label input { position: relative; width: 24px; height: 24px; margin-right: 10px; padding: 0px; border-color: #99B599; border-radius: 100%; }
+#form fieldset .content .metodo-envio label input:checked { border-color: var(--green); }
+#form fieldset .content .metodo-envio label input:checked::before { position: absolute; top: 50%; left: 50%; width: 12px; height: 12px; background-color: var(--green); border-radius: 100%; transform: translate(-50%, -50%); content: ''; }
+#form fieldset .content .metodo-pagamento { display: grid; grid-template-columns: repeat(3, 1fr); grid-gap: 24px; margin-bottom: 24px; }
+#form fieldset .content .metodo-pagamento span { width: 100%; height: auto; padding: 15px; border-radius: 8px; border: 1px solid #BDBDBD; text-align: center; cursor: pointer; }
+#form fieldset .content .metodo-pagamento span i { display: block; margin-bottom: 10px; font-size: 30px; }
+#form fieldset .content .metodo-pagamento span.active { background-color: #01AA001A; border-color: var(--green); color: var(--green); }
+#form fieldset .content .mp-cont { display: none; }
+#form fieldset .content .mp-c-cartao { display: block; }
+#form fieldset .content .info { border: 1px solid #DDE2E9; border-radius: 8px; overflow: hidden; }
+#form fieldset .content .info span { position: relative; display: block; width: 100%; padding: 20px 40px 20px 80px; border-bottom: 1px solid #DDE2E9; }
+#form fieldset .content .info span i { position: absolute; top: 50%; left: 25px; font-size: 28px; color: var(--green); transform: translateY(-50%); }
+#form fieldset .content .info span:last-of-type { border: none; }
+#form fieldset .content .info span strong { display: block; margin-bottom: 5px; font-weight: 600; font-size: 20px; color: var(--green); }
+#form fieldset .content .info span p { display: block; line-height: 1.4; font-size: 14px; }
+#form fieldset .content .info span p strong { font-weight: 600; }
+#form fieldset .content .compre-junto { margin-top: 20px; padding-top: 20px; border-top: 1px solid #BDBDBD; }
+#form fieldset .content .compre-junto h3 { margin-bottom: 20px; }
+#form fieldset .content .compre-junto .item { display: flex; align-items: flex-start; gap: 22px; margin-top: 16px; padding: 20px; background-color: #F4F4F4; border-radius: 12px; }
+#form fieldset .content .compre-junto .item figure { display: flex; align-items: center; justify-content: center; width: 140px; height: 140px; background-color: #fff; }
+#form fieldset .content .compre-junto .item figure img { width: 80%; }
+#form fieldset .content .compre-junto .item figcaption h2 { display: block; margin-top: 3px; font-weight: 600; font-size: 20px; }
+#form fieldset .content .compre-junto .item figcaption p { display: block; margin: 10px 0px; line-height: 1.4; }
+#form fieldset .content .compre-junto .item figcaption span.price { display: block; margin-bottom: 15px; font-weight: 600; font-size: 20px; }
+#form fieldset .content .compre-junto .item figcaption button { padding: 16px 30px; font-weight: 500; border: 1px solid var(--green); color: var(--green); border-radius: 6px; }
+#form fieldset .content .compre-junto .item figcaption button i { display: inline-block; margin-left: 5px; vertical-align: middle; }
+#form fieldset .content .compre-junto .item figcaption button:hover { background-color: var(--green); color: #fff; }
+#form fieldset .content .cupom { margin-top: 20px; }
+#form fieldset .content .cupom h4 { display: block; margin-bottom: 20px; font-weight: 600; font-size: 20px; color: var(--green); }
+#form fieldset .content .cupom h4 img { display: inline-block; margin-right: 7px; vertical-align: middle; }
+#form fieldset .content .cupom .codigo.grid { margin-bottom: 30px; gap: 10px; }
+#form fieldset .content .cupom .codigo button { width: 90px; height: 60px; margin-top: 20px; background-color: var(--green); color: #fff; font-weight: 500; font-size: 16px; border-radius: 6px; box-shadow: 0px 6px 10px #01AA0033; }
+#form fieldset .content .cupom .codigo button:hover { background-color: #60e144; }
+#form fieldset .content .cupom .detalhes h5 { display: block; margin-bottom: 10px; padding-bottom: 10px; font-weight: 600; font-size: 20px; border-bottom: 1px solid #BDBDBD; }
+#form fieldset .content .cupom .detalhes span { margin-bottom: 15px; color: var(--primary2); }
+#form fieldset .content .cupom .detalhes span p { font-weight: 600; }
+#form fieldset .content .cupom .detalhes span span { margin-bottom: 0px; }
+#form fieldset .content .cupom .detalhes span.active { color: var(--green); }
+#form fieldset .content .cupom .detalhes span.total { padding-top: 10px; border-top: 1px solid #BDBDBD; }
+#form fieldset .content .cupom .detalhes button { width: 100%; height: 60px; margin-top: 20px; background-color: var(--green); color: #fff; font-weight: 500; font-size: 16px; border-radius: 6px; box-shadow: 0px 6px 10px #01AA0033; }
+#form fieldset .content .cupom .detalhes button:hover { background-color: #60e144; transform: scale(1.05); }
+#form fieldset .content footer .txt { margin: 20px 0px; padding: 20px 0px; border-top: 1px solid #BDBDBD; border-bottom: 1px solid #BDBDBD; }
+#form fieldset .content footer .txt p { display: block; margin-bottom: 20px; line-height: 1.6; font-size: 12px; color: var(--primary2); }
+#form fieldset .content footer .txt p:last-of-type { margin-bottom: 0px; }
+
+/* checkout */
+#checkout { margin-top: -10px; opacity: 0; transition: all 1s ease; }
+#checkout.on { margin-top: 0px; opacity: 1; }
+#checkout .banner img { width: 100%; height: auto; margin-bottom: 20px; }
+#checkout section { border-radius: 8px; background-color: #fff; overflow: hidden; }
+#checkout section header { display: block; background-color: #009D68; }
+#checkout section header h2 { display: block; padding: 24px 0px; text-transform: uppercase; text-align: center; font-weight: 700; font-size: 20px; color: #fff; }
+#checkout section article { padding: 24px; }
+#checkout section article h6 { display: block; font-weight: 600; font-size: 20px; }
+#checkout section article .item { margin: 15px 0px 40px 0px; gap: 16px; }
+#checkout section article .item figure { width: 80px; height: auto; flex-direction: 0; }
+#checkout section article .item figure img { width: 100%; border-radius: 5px; }
+#checkout section article .item figcaption h1 { display: block; margin-bottom: 5px; font-weight: 700; font-size: 16px; }
+#checkout section article .item figcaption p { display: block; line-height: 1.4; font-size: 12px; }
+#checkout section article .item figcaption p strong { font-weight: 700; color: var(--green); }
+#checkout section article .dados { margin-bottom: 40px; }
+#checkout section article .dados fieldset legend p { display: block; margin: 7px 0px 30px 0px; font-size: 13px; }
+#checkout section article .dados label { display: block; margin-bottom: 26px; }
+#checkout section article .dados label:last-of-type { margin-bottom: 0px; }
+#checkout section article .dados label input { width: 100%; height: 56px; padding: 0px 20px; border: 2px solid #DDE2E9; border-radius: 8px; }
+#checkout section article .dados label input:focus,
+#checkout section article .dados label input:active { border-color: var(--primary); }
+#checkout section article .pagamento .head p { display: block; margin: 7px 0px 30px 0px; font-size: 13px; }
+#checkout section article .pagamento .metodo-pagamento { margin-bottom: 20px; gap: 16px; }
+#checkout section article .pagamento .metodo-pagamento span { display: flex; align-items: center; gap: 10px; width: 100%; height: 66px; padding: 0px 18px; border-radius: 8px; background-color: #EDF2F7; border: 2px solid #EDF2F7; cursor: pointer; }
+#checkout section article .pagamento .metodo-pagamento span i { font-size: 24px; }
+#checkout section article .pagamento .metodo-pagamento span b { margin-left: 10px; padding: 6px 10px; font-weight: 500; background-color: #009D68; color: #fff; font-size: 12px; border-radius: 5px; }
+#checkout section article .pagamento .metodo-pagamento span.active { border-color: #009D68; }
+#checkout section article .pagamento .metodo-pagamento span.active i { color: #009D68; }
+#checkout section article .pagamento .mp-cont { display: none; }
+#checkout section article .pagamento .mp-c-cartao { display: block; }
+#checkout section article .pagamento .info { border: 1px solid #DDE2E9; border-radius: 8px; overflow: hidden; }
+#checkout section article .pagamento .info span { position: relative; display: block; width: 100%; padding: 20px 40px 20px 80px; border-bottom: 1px solid #DDE2E9; }
+#checkout section article .pagamento .info span i { position: absolute; top: 50%; left: 25px; font-size: 28px; color: #009D68; transform: translateY(-50%); }
+#checkout section article .pagamento .info span:last-of-type { border: none; }
+#checkout section article .pagamento .info span strong { display: block; margin-bottom: 5px; font-weight: 600; font-size: 20px; color: #009D68; }
+#checkout section article .pagamento .info span p { display: block; line-height: 1.4; font-size: 14px; }
+#checkout section article .pagamento .info span p strong { font-weight: 600; }
+#checkout section article .pagamento .info span.msg strong { font-weight: 700; }
+#checkout section article .pagamento .grid { gap: 40px; margin-bottom: 20px; row-gap: 24px; }
+#checkout section article .pagamento .grid:last-of-type { margin-bottom: 0px; }
+#checkout section article .pagamento .grid.grid-3 { gap: 16px; margin-bottom: 20px; }
+#checkout section article .pagamento label { display: flex; flex-direction: column; gap: 8px; }
+#checkout section article .pagamento label strong { font-size: 12px; }
+#checkout section article .pagamento label input { width: 100%; height: 60px; padding: 0px 20px; border: 2px solid #DDE2E9; border-radius: 8px; font-size: 14px; }
+#checkout section article .pagamento label input.field-cartao { background: transparent url('../img/card.svg') no-repeat center right 10px; }
+#checkout section article .pagamento label select { width: 100%; height: 60px; padding: 0px 20px; border: 2px solid #DDE2E9; border-radius: 8px; background: transparent url('../img/select.svg') no-repeat center right 15px; color: #666; font-size: 14px; }
+#checkout section article .pagamento label select.parcelas { background-color: #EDF2F7; border-color: #EDF2F7; }
+#checkout section article .pagamento figure img { width: 100%; }
+#checkout section article span.msg { display: block; margin-top: 20px; color: #919bad; font-size: 13px; white-space: nowrap; }
+#checkout section article span.msg img { display: inline-block; margin-right: 5px; vertical-align: middle; }
+#checkout section article span.msg strong { font-weight: 700; }
+#checkout section article .compre-junto { margin: 40px 0px; }
+#checkout section article .compre-junto .head { margin-bottom: 40px; }
+#checkout section article .compre-junto .head p { margin-top: 10px; }
+#checkout section article .compre-junto .cj-item { margin-bottom: 16px; border: 3px dashed #E73F5D; border-radius: 8px; background-color: #FFFBE9; }
+#checkout section article .compre-junto .cj-item h5 { display: block; margin: -3px -3px 0px -3px; padding: 14px 25px; background-color: #E73F5D; color: #fff; font-weight: 700; font-size: 20px; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+#checkout section article .compre-junto .cj-item p { display: block; padding: 25px 25px 0px 25px; }
+#checkout section article .compre-junto .cj-item .line label { display: flex; align-items: center; justify-content: space-between; margin: 25px; padding: 16px; background-color: rgba(255, 255, 255, 0.67); border-radius: 8px; transition: all .3s ease; }
+#checkout section article .compre-junto .cj-item .line label:hover { box-shadow: 0px 30px 30px rgba(0,0,0,.1); transform: scale(1.05); }
+#checkout section article .compre-junto .cj-item .line .line-info { display: flex; align-items: center; gap: 15px; padding-right: 40px; }
+#checkout section article .compre-junto .cj-item .line .line-info i { color: var(--red); }
+#checkout section article .compre-junto .cj-item .line .line-info input { position: relative; width: 24px; height: 24px; background-color: #fff; border: 1px solid #ccc; border-radius: 8px; }
+#checkout section article .compre-junto .cj-item .line .line-info input:checked::before { position: absolute; top: 50%; left: 50%; width: 12px; height: 12px; background-color: var(--primary); border-radius: 4px; transform: translate(-50%, -50%); content: ''; }
+#checkout section article .compre-junto .cj-item .line .line-info strong { font-weight: 700; }
+#checkout section article .compre-junto .cj-item .line span.price { font-weight: 700; color: var(--green); }
+#checkout section article .detalhes { display: flex; flex-direction: column; }
+#checkout section article .detalhes h6 { margin-bottom: 20px; }
+#checkout section article .detalhes span { padding: 10px 0px; border-top: 1px solid #DDE2E9; }
+#checkout section article .detalhes span strong { font-weight: 700; }
+#checkout section article .detalhes span.total { align-items: flex-end; flex-direction: column; gap: 5px; border-bottom: 1px solid #DDE2E9; }
+#checkout section article .detalhes span.total b { padding: 5px; font-weight: 700; background-color: #eee; font-size: 13px; }
+#checkout section article .detalhes span.total strong { font-size: 17px; color: #009D68; }
+#checkout section article .detalhes span.total p { font-size: 12px; }
+#checkout section article button { width: 100%; height: 60px; margin: 20px 0px; background-color: #009D68; color: #fff; font-weight: 500; font-size: 16px; border-radius: 6px; box-shadow: 0px 6px 10px #01AA0033; }
+#checkout section article button:hover { background-color: #0ec689; transform: scale(1.05); }
+#checkout section article footer p { display: block; margin-bottom: 15px; line-height: 1.6; font-size: 12px; color: #919191; }
+#checkout section article footer p a { color: var(--primary); text-decoration: underline; }
+#checkout section article footer img { display: block; margin-top: 20px; }
+#checkout aside figure.main img { width: 100%; height: auto; }
+#checkout aside .depoimentos .t { display: block; margin-bottom: 18px; padding: 18px; background-color: #fff; text-align: center; }
+#checkout aside .depoimentos .t figure img { display: block; width: 40px; height: 40px; margin: 0px auto; object-fit: cover; }
+#checkout aside .depoimentos .t strong { display: block; margin: 10px 0px; font-weight: 600; font-size: 20px; }
+#checkout aside .depoimentos .t .stars { display: flex; gap: 5px; justify-content: center; }
+#checkout aside .depoimentos .t .stars i { color: #D69E2E; }
+#checkout aside .depoimentos .t p { display: block; margin-top: 10px; font-size: 16px; line-height: 1.4; }
+#checkout aside .infos { display: block; background-color: #eee; border-radius: 8px; overflow: hidden; }
+#checkout aside .infos span { position: relative; display: block; border-bottom: 2px solid #fff; padding: 20px 40px 20px 80px; }
+#checkout aside .infos span:last-of-type { border: none; }
+#checkout aside .infos span i { position: absolute; top: 50%; left: 20px; width: 40px; font-size: 30px; transform: translateY(-50%); text-align: center; }
+#checkout aside .infos span strong { display: block; font-weight: 700; font-size: 18px; }
+#checkout aside .infos span p { display: block; margin-top: 5px; font-size: 13px; line-height: 1.4; }

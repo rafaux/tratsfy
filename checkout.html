@@ -1,0 +1,324 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<title>AfiliaPay</title>
+<!-- stylesheets -->
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" />
+<link rel="icon" href="assets/img/favicon.svg" />
+</head>
+
+<body>
+
+<div id="countdown-minutes">
+  <span class="flex align-center"><b class="minutes">10</b> <b class="separator">:</b> <b class="seconds">00</b></span>
+  <figure><img src="assets/img/countdown-clock.svg" /></figure>
+  <strong>Finalize a sua compra!</strong>
+</div>
+<!-- /#countdown-minutes -->
+
+<div id="checkout">
+  <div class="container">
+    <div class="banner">
+      <figure><img src="assets/img/checkout-banner.png" /></figure>
+    </div>
+    <div class="grid grid-1-350">
+      <section>
+        <header>
+          <h2><i class="fa-solid fa-shield-check"></i> Compra 100% segura</h2>
+        </header>
+        <article>
+          <div class="head">
+            <h6>Você está comprando:</h6>
+          </div>
+          <div class="item flex align-center">
+            <figure><img src="assets/img/_temp/item.png" /></figure>
+            <figcaption>
+              <h1>Aqui Primeiro</h1>
+              <p>Até 12x de <strong>R$ 68,98</strong> <br />ou até R$ 687,00 à vista</p>
+              <p>Renovação Anual</p>
+            </figcaption>
+          </div>
+          <div class="dados">
+            <form action=".">
+              <fieldset>
+                <legend>
+                  <h6>Dados Pessoais</h6>
+                  <p>Informe os seus dados pessoais para realizar a compra</p>
+                </legend>
+                <label>
+                  <input type="text" placeholder="Nome completo" />
+                </label>
+                <label>
+                  <input type="text" placeholder="Seu CPF/CNPJ" />
+                </label>
+                <label>
+                  <input type="email" placeholder="Seu principal email" />
+                </label>
+                <label>
+                  <input type="tel" class="field-tel" placeholder="Seu Celular" />
+                </label>
+              </fieldset>
+            </form>
+          </div>
+          <div class="pagamento">
+            <div class="head">
+              <h6>Pagamento</h6>
+              <p>Selecione a forma de pagamento desejada</p>
+            </div>
+            <div class="flex grid-3 metodo-pagamento">
+              <span ref="mp-cartao" class="active"><i class="fa-regular fa-credit-card"></i> Cartão de Crédito</span>
+              <span ref="mp-pix"><i class="fa-brands fa-pix"></i> Pix <b>5% de <br />desconto</b></span>
+              <span ref="mp-boleto"><i class="fa-solid fa-barcode"></i> Boleto Bancário</span>
+            </div>
+            <div class="mp-cont mp-c-cartao">
+              <div class="grid grid-2">
+                <div class="card">
+                  <div class="grid">
+                    <label>
+                      <input type="text" class="field-cartao" placeholder="Número do Cartão" />
+                    </label>
+                  </div>
+                  <div class="grid grid-3">
+                    <label>
+                      <select>
+                        <option value="">MM</option>
+                      </select>
+                    </label>
+                    <label>
+                      <select>
+                        <option value="">AA</option>
+                      </select>
+                    </label>
+                    <label>
+                      <input type="text" placeholder="CVV" maxlength="3" />
+                    </label>
+                  </div>
+                  <label>
+                    <input type="text" placeholder="Nome do Titular do Cartão" />
+                  </label>
+                  <label class="mt-20">
+                    <strong>Parcelamento</strong>
+                    <select class="parcelas">
+                      <option value="">Escolha abaixo</option>
+                    </select>
+                  </label>
+                  <span class="msg"><img src="assets/img/card.svg" /> Na fatura do seu cartão aparecerá como: <strong>APay*GuiaScore</strong></span>
+                </div>
+                <figure><img src="assets/img/card.png" /></figure>
+              </div>
+            </div>
+            <div class="mp-cont mp-c-pix">
+              <div class="info">
+                <span>
+                  <i class="fa-light fa-timer"></i>
+                  <strong>Rápido</strong>
+                  <p>Faça seus pagamentos em segundos.</p>
+                </span>
+                <span>
+                  <i class="fa-light fa-qrcode"></i>
+                  <strong>Fácil</strong>
+                  <p>Abriu o Pix no app do seu banco, escaneou o QR Code, finalizou a compra.</p>
+                </span>
+                <span>
+                  <i class="fa-light fa-shield-check"></i>
+                  <strong>Seguro</strong>
+                  <p>O Pix foi criado pelo Banco Central para facilitar suas compras.</p>
+                </span>
+              </div>
+            </div>
+            <div class="mp-cont mp-c-boleto">
+              <div class="info">
+                <span>
+                  <i class="fa-light fa-calendar-week"></i>
+                  <strong>3 dias úteis</strong>
+                  <p>O pagamento no boleto leva até 3 dias úteis para ser aprovado e então liberar os produtos</p>
+                </span>
+                <span>
+                  <i class="fa-light fa-barcode"></i>
+                  <strong>Pagamento</strong>
+                  <p>Você poderá pagar o boleto em qualquer banco, lotérica ou pela internet.</p>
+                </span>
+                <span>
+                  <i class="fa-light fa-file-invoice-dollar"></i>
+                  <strong>Gerar Boleto</strong>
+                  <p>Para finalizar, clique no botão <b>Gerar boleto</b> e siga as instruções que serão exibidas na tela.</p>
+                </span>
+                <span>
+                  <i class="fa-light fa-money-check-dollar"></i>
+                  <strong>Vencimento</strong>
+                  <p>A data de vencimento do boleto será <b>10/07/2023</b>.</p>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="compre-junto">
+            <div class="head">
+              <h6>Aproveite e leve junto:</h6>
+              <p>Leve junto agora as ofertas abaixo com um desconto especial:</p>
+            </div>
+            <div class="cj-item">
+              <h5>Google ADS para afiliados</h5>
+              <p>Os primeiros passos para iniciar uma campanha pelo Google Ads.</p>
+              <div class="line">
+                <label>
+                  <div class="line-info">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <input type="checkbox" />
+                    <img src="assets/img/product.png" />
+                    <strong>Sim, eu quero Google ADS para afiliados</strong>
+                  </div>
+                  <span class="price">por: R$ 397,00</span>
+                </label>
+              </div>
+            </div>
+            <div class="cj-item">
+              <h5>Google ADS para afiliados</h5>
+              <p>Os primeiros passos para iniciar uma campanha pelo Google Ads.</p>
+              <div class="line">
+                <label>
+                  <div class="line-info">
+                    <i class="fa-solid fa-arrow-right-long"></i>
+                    <input type="checkbox" />
+                    <img src="assets/img/product.png" />
+                    <strong>Sim, eu quero Google ADS para afiliados</strong>
+                  </div>
+                  <span class="price">por: R$ 397,00</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="detalhes">
+            <h6>Detalhes da compra</h6>
+            <span class="flex align-center justify-between">
+              <p>Curso aqui primeiro</p>
+              <strong>R$ 687,00</strong>
+            </span>
+            <span class="flex align-center justify-between">
+              <p>Google ADS para afiliados</p>
+              <strong>R$ 687,00</strong>
+            </span>
+            <span class="flex align-center justify-between">
+              <p>Design rápido e criativo para seus anúncios</p>
+              <strong>R$ 687,00</strong>
+            </span>
+            <span class="flex total">
+              <b>Valor total</b>
+              <strong>7x de R$ 69,63 no cartão *</strong>
+              <p>ou R$ 1.987,65 à vista</p>
+            </span>
+          </div>
+          <button>Comprar agora</button>
+          <footer>
+            <p>A AfiliaPay está processando o seu pagamento a serviço de  Nome do Produtor. Em caso de dúvidas sobre a sua compra entre em contato com <a href="mailto:nomedoprodutor@gmail.com">nomedoprodutor@gmail.com</a></p>
+            <p>*Parcelamento com tarifa de 2.99% a.m</p>
+            <figure><img src="assets/img/checkout-footer.svg" /></figure>
+          </footer>
+        </article>
+      </section>
+      <aside>
+        <figure class="main"><img src="assets/img/checkout-sidebar.png" /></figure>
+        <div class="depoimentos">
+          <div class="t">
+            <figure><img src="assets/img/_temp/avatar.png" /></figure>
+            <strong>Ivan Ribeiro</strong>
+            <span class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></span>
+            <p>Só agradecer pela sua entrega. Nunca pensei que daria uma vida uma vida digna para minha familia e compraria o carro dos meus sonhos.</p>
+          </div>
+          <div class="t">
+            <figure><img src="assets/img/_temp/avatar.png" /></figure>
+            <strong>Ivan Ribeiro</strong>
+            <span class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></span>
+            <p>Só agradecer pela sua entrega. Nunca pensei que daria uma vida uma vida digna para minha familia e compraria o carro dos meus sonhos.</p>
+          </div>
+          <div class="t">
+            <figure><img src="assets/img/_temp/avatar.png" /></figure>
+            <strong>Ivan Ribeiro</strong>
+            <span class="stars"><i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i></span>
+            <p>Só agradecer pela sua entrega. Nunca pensei que daria uma vida uma vida digna para minha familia e compraria o carro dos meus sonhos.</p>
+          </div>
+        </div>
+        <!-- /.depoimentos -->
+        <div class="infos">
+          <span>
+            <i class="fa-light fa-lock-keyhole"></i>
+            <strong>Compra segura</strong>
+            <p>Ambiente seguro e autenticado</p>
+          </span>
+          <span>
+            <i class="fa-light fa-fingerprint"></i>
+            <strong>Privacidade</strong>
+            <p>Suas informações 100% segura</p>
+          </span>
+          <span>
+            <i class="fa-light fa-thumbs-up"></i>
+            <strong>Conteúdo aprovado</strong>
+            <p>100% revisado e aprovado</p>
+          </span>
+          <span>
+            <i class="fa-light fa-envelopes-bulk"></i>
+            <strong>Conteúdo digital</strong>
+            <p>Após a compra, os dados de acesso são enviados imediatamente em seu e-mail.</p>
+          </span>
+          <span>
+            <i class="fa-light fa-award"></i>
+            <strong>Garantia</strong>
+            <p>Você tem a garantia de reembolso caso não goste do produto dentro do prazo de garantia do produto.</p>
+          </span>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <!-- /.container -->
+</div>
+<!-- /#checkout -->
+
+</body>
+
+<script>
+/* countdown (10 minutes) */
+function startTenMinuteCountdown() {
+    const now = new Date();
+    const targetDate = new Date(now.getTime() + 10 * 60 * 1000).getTime();
+
+    const minutesElement = document.querySelector('.minutes');
+    const secondsElement = document.querySelector('.seconds');
+
+    const countdownInterval = setInterval(function() {
+        const currentTime = new Date().getTime();
+        const distance = targetDate - currentTime;
+
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            minutesElement.textContent = "00";
+            secondsElement.textContent = "00";
+            return;
+        }
+
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        minutesElement.textContent = String(minutes).padStart(2, '0');
+        secondsElement.textContent = String(seconds).padStart(2, '0');
+    }, 1000);
+}
+
+document.addEventListener('DOMContentLoaded', startTenMinuteCountdown);
+</script>
+
+<!--scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+</body>
+
+</html>
