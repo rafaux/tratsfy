@@ -17,32 +17,42 @@
 
 <body class="bg1">
 
-<div class="form-float flex align-center">
-  <aside>
-    <h2>Aumente o lucro das suas vendas usando a <strong>TrastFy</strong></h2>
-  </aside>
+<div class="form-float ff-half">
   <section>
     <h1>Tratsfy</h1>
     <form action=".">
       <fieldset>
-        <legend>Acesse a sua conta</legend>
+        <legend>Informe sua nova senha</legend>
+        <p class="msg">Digite abaixo a nova senha de sua conta na Tratsfy</p>
         <label>
-          <input type="email" placeholder="E-mail" />
-          <i class="fa-light fa-envelope left"></i>
-        </label>
-        <label>
-          <input type="password" class="pwd" placeholder="Senha" />
+          <input type="password" class="pwd" placeholder="Digite a senha" />
           <i class="fa-light fa-lock-keyhole left"></i>
           <i class="fa-regular fa-eye right"></i>
         </label>
-        <small><a href="recupera-senha.html">Esqueceu sua senha?</a></small>
-        <button>Entrar agora</button>
-        <p>Ainda não tem uma conta? <a href="registro.html">Clique aqui</a></p>
+        <label>
+          <input type="password" class="pwd" placeholder="Confirme a senha" />
+          <i class="fa-light fa-lock-keyhole left"></i>
+          <i class="fa-regular fa-eye right"></i>
+        </label>
+        <button>Salvar Senha</button>
       </fieldset>
     </form>
   </section>
 </div>
-<!-- /.form-float -->
+<!-- /.login -->
+
+<script>
+  const passwordInput = document.getElementsByClassName('pwd');
+  const togglePassword = document.querySelector('.right');
+
+  togglePassword.addEventListener('click', function () {
+      const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+      passwordInput.setAttribute('type', type);
+      
+      this.classList.toggle('fa-eye');
+      this.classList.toggle('fa-eye-slash');
+  });
+</script>
   
 <!--scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

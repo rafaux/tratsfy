@@ -17,32 +17,35 @@
 
 <body class="bg1">
 
-<div class="form-float flex align-center">
-  <aside>
-    <h2>Aumente o lucro das suas vendas usando a <strong>TrastFy</strong></h2>
-  </aside>
+<div class="form-float ff-half">
   <section>
     <h1>Tratsfy</h1>
+    <span class="alert ok">
+      <strong>Enviado com sucesso</strong>
+      <p>Enviamos o link de redefinição de senha em seu e-mail.</p>
+      <i class="fa-solid fa-circle-exclamation icon"></i>
+      <i class="fa-regular fa-xmark close"></i>
+    </span>
+    <span class="alert no">
+      <strong>Falha no envio</strong>
+      <p>Confira se o e-mail está correto e tente novamente.</p>
+      <i class="fa-solid fa-circle-xmark icon"></i>
+      <i class="fa-regular fa-xmark close"></i>
+    </span>
     <form action=".">
       <fieldset>
-        <legend>Acesse a sua conta</legend>
+        <legend>Recuperar Senha</legend>
+        <p class="msg">Digite seu e-mail abaixo e um link de redefinição de senha da sua conta será enviado para ele.</p>
         <label>
-          <input type="email" placeholder="E-mail" />
+          <input type="email" required placeholder="E-mail" />
           <i class="fa-light fa-envelope left"></i>
         </label>
-        <label>
-          <input type="password" class="pwd" placeholder="Senha" />
-          <i class="fa-light fa-lock-keyhole left"></i>
-          <i class="fa-regular fa-eye right"></i>
-        </label>
-        <small><a href="recupera-senha.html">Esqueceu sua senha?</a></small>
-        <button>Entrar agora</button>
-        <p>Ainda não tem uma conta? <a href="registro.html">Clique aqui</a></p>
+        <button>Recuperar Senha</button>
       </fieldset>
     </form>
   </section>
 </div>
-<!-- /.form-float -->
+<!-- /.login -->
   
 <!--scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

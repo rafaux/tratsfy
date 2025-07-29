@@ -2,7 +2,7 @@
 * { margin: 0px; padding: 0px; border: 0px; font-weight: normal; font-size: 100%; list-style: none; line-height: 1; outline: 0px; background: none; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-font-smoothing: antialiased; -ms-font-smoothing: antialiased; -o-font-smoothing: antialiased; font-smoothing: antialiased; }
 
 /* var */
-:root { --primary: #151515; --primary2: #3B3B3B; --whitegray: #DDE2E9; --gray: #1A1D2114; --green: #3DB822; --red: #e73f5d; --watermelon: #E73F5D; }
+:root { --primary: #151515; --primary2: #3B3B3B; --whitegray: #DDE2E9; --gray: #1A1D2114; --green: #3DB822; --green2: #30A46C; --red: #e73f5d; --watermelon: #E73F5D; }
 
 /* global class */
 .container { display: block; width: auto; max-width: 1100px; height: auto; margin: 0px auto; }
@@ -10,6 +10,7 @@
 /* base */
 a { text-decoration: none; transition: all .5s ease; }
 body { background: #FAFAFA; color: var(--primary); font: normal 15px 'Noto Sans', sans-serif; overflow-x: hidden; }
+body.bg1 { background: #FAFAFA url('../img/bg.jpg') no-repeat; background-size: cover; }
 input, textarea, select, button { font: normal 15px 'Noto Sans', sans-serif; appearance: none; -webkit-appearance: none; border-radius: 0px; transition: all .3s ease; }
 select, button { cursor: pointer; }
 input[type=submit], button { transition: all .5s ease; }
@@ -206,3 +207,55 @@ input[type=submit], button { transition: all .5s ease; }
 #checkout aside .infos span i { position: absolute; top: 50%; left: 20px; width: 40px; font-size: 30px; transform: translateY(-50%); text-align: center; }
 #checkout aside .infos span strong { display: block; font-weight: 700; font-size: 18px; }
 #checkout aside .infos span p { display: block; margin-top: 5px; font-size: 13px; line-height: 1.4; }
+
+/* form float */
+.form-float { position: absolute; top: 50%; left: 50%; width: 1000px; height: auto; transform: translate(-50%, -50%); }
+.form-float aside { width: 50%; padding-right: 30px; text-align: center; }
+.form-float aside h2 { display: block; font-size: 36px; line-height: 1.2; }
+.form-float aside h2 strong { font-weight: 700; }
+.form-float section { width: 50%; padding: 32px; background-color: #fff; border-radius: 24px; box-shadow: 0px 16px 32px rgba(0,0,0,.1); }
+.form-float section h1 { display: block; margin-bottom: 32px; font-weight: 700; font-size: 56px; color: var(--green2); text-align: center; }
+.form-float section form legend { display: block; margin-bottom: 32px; font-weight: 600; font-size: 18px; text-transform: uppercase; text-align: center; }
+.form-float section form label { position: relative; display: block; margin-bottom: 16px; }
+.form-float section form label input { width: 100%; height: 57px; padding: 0px 20px 0px 50px; border: 1.5px solid #dddde3; border-radius: 6px; }
+.form-float section form label i { position: absolute; top: 50%; font-size: 20px; transform: translateY(-50%); color: #5C5F66; }
+.form-float section form label i.left { left: 15px; }
+.form-float section form label i.right { right: 15px; cursor: pointer; }
+.form-float section form small a { display: block; text-align: right; color: var(--green2); font-weight: 500; font-size: 14px; }
+.form-float section form button { width: 90%; height: 56px; margin: 16px 5%; background-color: var(--green2); font-weight: 700; font-size: 16px; color: #fff; border-radius: 6px; }
+.form-float section form button:hover { background-color: var(--green); }
+.form-float section form p { display: block; padding: 0px 30px; color: #9E9FA9; text-align: center; font-size: 14px; line-height: 1.4; }
+.form-float section form p.msg { margin: -20px 0px 20px 0px; }
+.form-float section form p a { color: var(--green2); }
+.form-float section form a:hover { text-decoration: underline; }
+.form-float section .terms { display: block; margin-top: 30px; text-align: center; cursor: pointer; }
+.form-float section .terms a { color: var(--green2); }
+.form-float section .terms input { position: relative; display: inline-block; width: 24px; height: 24px; margin-right: 7px; padding: 0px; background-color: #fff; border: 1px solid #ccc; border-radius: 8px; vertical-align: middle; }
+.form-float section .terms input:checked::before { position: absolute; top: 50%; left: 50%; width: 12px; height: 12px; background-color: var(--primary); border-radius: 4px; transform: translate(-50%, -50%); content: ''; }
+.form-float section .alert { position: relative; display: block; margin-bottom: 15px; padding: 16px 52px; border-radius: 7px; }
+.form-float section .alert strong { display: block; margin-bottom: 10px; font-weight: 600; }
+.form-float section .alert p { display: block; color: #202224; line-height: 1.4; font-size: 0.9rem; }
+.form-float section .alert .icon { position: absolute; top: 17px; left: 20px; }
+.form-float section .alert .close { position: absolute; top: 17px; right: 17px; cursor: pointer; }
+.form-float section .alert.ok { background-color: #F3FCF6; border: 1px solid #ADDDC0; }
+.form-float section .alert.ok .icon { color: #30A46C; }
+.form-float section .alert.no { background-color: #FEF3F4; border: 1px solid #F5AEB3; }
+.form-float section .alert.no .icon { color: #DD4249; }
+
+  /* form float -> half */
+  .ff-half { width: 500px; }
+  .ff-half section { width: 100%; }
+
+/* responsive */
+
+@media(max-width: 1000px){
+
+  /* form */
+  .form-float { width: 100%; margin-top: 60px; padding: 0px 20px; position: relative; top: auto; left: auto; transform: none; flex-direction: column; }
+  .form-float aside { width: 100%; padding-right: 0px; }
+  .form-float aside h2 { font-size: 24px; }
+  .form-float section form legend { font-size: 14px; }
+  .form-float section { width: 100%; }
+
+
+}

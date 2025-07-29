@@ -14,6 +14,25 @@ $(document).ready(function(){
     if(tipo == 'mp-pix'){ $('.mp-c-pix').slideDown() }
     if(tipo == 'mp-boleto'){ $('.mp-c-boleto').slideDown() }
   })
+
+  // Close Alert
+  $('.form-float section .alert .close').click(function(){
+    $(this).parent().slideUp();
+  })
+
+  // View Password
+    $('.right').on('click', function () {
+        const $passwordInput = $(this).siblings('.pwd'); 
+        const currentType = $passwordInput.attr('type');
+        
+        if (currentType === 'password') {
+            $passwordInput.attr('type', 'text');
+        } else {
+            $passwordInput.attr('type', 'password');
+        }
+        
+        $(this).toggleClass('fa-eye fa-eye-slash');
+    });
   
   // Mask
   $('.field-tel').mask('(00) 00000-0000');
