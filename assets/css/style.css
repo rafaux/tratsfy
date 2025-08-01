@@ -369,6 +369,7 @@ input[type=submit], button { transition: all .5s ease; }
   .form-float section { width: 100%; }
 
   /* dashboard */
+  #main header.head { margin-bottom: 20px; }
   #main header.head h2 { font-size: 24px; }
   #main .stats { grid-template-columns: 1fr; }
   .dashboard-help { flex-direction: column; }
@@ -387,5 +388,6 @@ input[type=submit], button { transition: all .5s ease; }
 
   /* dashboard */
   #main { width: 100%; margin-left: 0px; padding: 20px 20px 100px 20px; }
+  #main .graph .chart-bar .bar { width: 16px; }
 
 }
