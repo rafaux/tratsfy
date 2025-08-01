@@ -378,6 +378,9 @@ input[type=submit], button { transition: all .5s ease; }
 }
 
 @media(max-width: 800px){
+  
+  /* global */
+  html, body { overflow-x: hidden; }
 
   /* header */
   #header .right span.help { display: none; }
