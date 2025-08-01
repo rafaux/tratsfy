@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Tratsfy</title>
+<!-- stylesheets -->
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" />
+<link rel="icon" href="assets/img/favicon.svg" />
+</head>
+
+<body class="dash">
+
+<header id="header" class="flex justify-between align-center">
+  <h1><a href="dashboard.html">TratsFy</a></h1>
+  <div class="right">
+    <span class="help"><a href="central-de-ajuda.html"><i class="fa-solid fa-question"></i>Central de Ajuda</a></span>
+    <span class="avatar"><a href="minha-conta.html"><i class="fa-solid fa-user"></i></a></span>
+    <span class="menu"><i class="fa-regular fa-bars"></i></span>
+  </div>
+</header>
+<!-- /#header -->
+
+<aside id="sidebar">
+  <nav>
+    <ul>
+      <li><a href="dashboard.html" class="active"><i class="fa-regular fa-house"></i> Painel</a></li>
+      <li>
+        <a href="minha-conta.html" class="sub"><i class="fa-regular fa-circle-user"></i> Minha Conta</a>
+        <ul>
+          <li><a href="minha-conta-meu-perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a></li>
+          <li><a href="minha-conta-minhas-faturas.html"><i class="fa-regular fa-file-lines"></i> Minhas Faturas</a></li>
+        </ul>
+      </li>
+      <li><a href="indique-ganhe.html"><i class="fa-regular fa-circle-dollar"></i> Indique e Ganhe</a></li>
+      <li>
+        <a href="produtos.html" class="sub"><i class="fa-regular fa-layer-group"></i> Produtos</a>
+        <ul>
+          <li><a href="produtos-criar-produto.html"><i class="fa-regular fa-folder-plus"></i> Criar Produto</a></li>
+          <li><a href="produtos-meus-produtos.html"><i class="fa-solid fa-folder-open"></i> Meus Produtos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="afiliados.html" class="sub"><i class="fa-regular fa-megaphone"></i> Afiliados</a>
+        <ul>
+          <li><a href="afiliados-configuracoes-gerais.html"><i class="fa-regular fa-megaphone"></i> Configurações Gerais</a></li>
+          <li><a href="afiliados-solicitacoes-saque.html"><i class="fa-regular fa-money-from-bracket"></i> Solicitações de Saque</a></li>
+          <li><a href="afiliados-meus-afiliados.html"><i class="fa-light fa-users"></i> Meus Afiliados</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="links-pagamento.html" class="sub"><i class="fa-regular fa-link"></i> Links de Pagamento</a>
+        <ul>
+          <li><a href="links-pagamento-gerar.html"><i class="fa-light fa-up-to-line"></i> Gerar Links</a></li>
+          <li><a href="links-pagamento-configuracoes.html"><i class="fa-regular fa-sliders-simple"></i> Configurações de Links</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="vendas.html" class="sub"><i class="fa-regular fa-wallet"></i> Vendas</a>
+        <ul>
+          <li><a href="vendas-todas-as-vendas.html"><i class="fa-regular fa-list-check"></i> Todas as Vendas</a></li>
+          <li><a href="vendas-carrinhos-abandonados.html"><i class="fa-regular fa-cart-shopping"></i> Carrinhos Abandonados</a></li>
+        </ul>
+      </li>
+      <li><a href="relatorios.html"><i class="fa-light fa-chart-pie"></i> Relatórios</a></li>
+      <li><a href="ferramentas.html"><i class="fa-light fa-wrench"></i> Ferramentas</a></li>
+      <li>
+        <a href="configuracoes-gerais.html" class="sub"><i class="fa-light fa-gears"></i>Configurações Gerais</a>
+        <ul>
+          <li><a href="configuracoes-gerais-checkout.html"><i class="fa-solid fa-qrcode"></i> Checkout</a></li>
+          <li><a href="configuracoes-gerais-dados-suporte.html"><i class="fa-regular fa-life-ring"></i> Dados de Suporte</a></li>
+          <li><a href="configuracoes-gerais-emails-transacionais.html"><i class="fa-light fa-envelope"></i> E-mails Transacionais</a></li>
+          <li><a href="configuracoes-gerais-meios-pagamento.html"><i class="fa-light fa-credit-card"></i> Meios de Pagamento</a></li>
+          <li><a href="configuracoes-gerais-colaboradores.html"><i class="fa-light fa-user-group"></i> Colaboradores</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
+<!-- /#sidebar -->
+
+<main id="main">
+
+  <header class="head">
+    <h2>Seja bem-vindo, Jackson! <i class="fa-regular fa-hand-wave"></i></h2>
+    <p>Abaixo você pode conferir tudo aquilo que você tem vendido usando a TratsFy como seu checkout transparente.</p>
+  </header>
+
+  <section class="stats grid grid-3">
+    <article>
+      <header class="flex justify-between align-center">
+        <strong>Vendas de Hoje</strong>
+        <i class="fa-regular fa-wallet"></i>
+      </header>
+      <span class="price">R$ 1.234.567,89</span>
+      <small class="positive">+8.5% do que ontem</small>
+    </article>
+    <article>
+      <header class="flex justify-between align-center">
+        <strong>Vendas da Semana</strong>
+        <i class="fa-regular fa-chart-waterfall"></i>
+      </header>
+      <span class="price">R$ 1.234.567,89</span>
+      <small class="positive">+8.5% do que ontem</small>
+    </article>
+    <article>
+      <header class="flex justify-between align-center">
+        <strong>Vendas do Mês</strong>
+        <i class="fa-regular fa-pig"></i>
+      </header>
+      <span class="price">R$ 1.234.567,89</span>
+      <small class="no">+8.5% do que ontem</small>
+    </article>
+  </section>
+  <!-- /.stats -->
+
+  <section class="stats-middle grid">
+    <article>
+      <header>
+        <strong>Suas vendas dos últimos 7 dias</strong>
+      </header>
+      <div class="graph">
+        <div class="y-axis">
+          <span>R$ 1.000</span>
+          <span>R$ 800</span>
+          <span>R$ 600</span>
+          <span>R$ 400</span>
+          <span>R$ 200</span>
+        </div>
+        <div class="chart-container" id="salesChart">
+          <div class="chart-bar">
+            <div class="bar" data-value="R$ 930" ref="140px;"></div>
+            <div class="label">Seg</div>
+          </div>
+          <div class="chart-bar">
+            <div class="bar" data-value="R$ 970" ref="146px;"></div>
+            <div class="label">Ter</div>
+          </div>
+          <div class="chart-bar">
+            <div class="bar" data-value="R$ 690" ref="104px;"></div>
+            <div class="label">Qua</div>
+          </div>
+          <div class="chart-bar">
+            <div class="bar" data-value="R$ 850" ref="128px;"></div>
+            <div class="label">Qui</div>
+          </div>
+          <div class="chart-bar">
+            <div class="bar" data-value="R$ 640" ref="96px;"></div>
+            <div class="label">Sex</div>
+          </div>
+          <div class="chart-bar">
+            <div class="bar" data-value="R$ 790" ref="119px;"></div>
+            <div class="label">Sáb</div>
+          </div>
+          <div class="chart-bar">
+            <div class="bar" data-value="R$ 920" ref="138px;"></div>
+            <div class="label">Dom</div>
+          </div>
+        </div>
+      </div>
+    </article>
+    <article class="user">
+      <div class="user-info">
+        <figure><img src="assets/img/_temp/avatar2.png" /></figure>
+        <figcaption>
+          <strong>Gerente de Contas</strong>
+          <h6>Daniel Matos</h6>
+          <span><a href="mailto:daniel@tratsfy.com">daniel@tratsfy.com</a></span>
+        </figcaption>
+      </div>
+      <span class="wp"><a href="https://wa.me/55"><i class="fa-brands fa-whatsapp"></i> Chame no Whatsapp</a></span>
+    </article>
+    <article class="win">
+      <header class="flex align-center">
+        <i class="fa-regular fa-circle-dollar"></i>
+        <h6>Indique e Ganhe</h6>
+      </header>
+      <p>Indique novos usuários para a TratsFy e ganhe 10% das faturas pagas por eles por 24 meses.</p>
+      <span><a href="">Chame mais <i class="fa-light fa-arrow-right-long"></i></a></span>
+    </article>
+  </section>
+  <!-- /.stats-middle -->
+
+  <section class="stats-bottom grid grid-3">
+    <article>
+      <header>
+        <strong>Métricas Rápidas do dia</strong>
+      </header>
+      <span class="line flex justify-between align-center">
+        <p><i class="fa-light fa-ticket"></i> Ticket Médio Hoje</p>
+        <strong>R$ 123,45</strong>
+      </span>
+      <span class="line flex justify-between align-center">
+        <p><i class="fa-regular fa-chart-waterfall"></i> Taxa de Conversão</p>
+        <strong>198%</strong>
+      </span>
+      <span class="line flex justify-between align-center">
+        <p><i class="fa-light fa-image-user"></i> Clientes Únicos</p>
+        <strong>1.234</strong>
+      </span>
+    </article>
+    <article>
+      <header>
+        <strong>Métodos de pagamentos</strong>
+      </header>
+      <span class="line flex justify-between align-center">
+        <p><i class="fa-light fa-credit-card"></i> Cartão de Crédito</p>
+        <strong>40%</strong>
+      </span>
+      <span class="line flex justify-between align-center">
+        <p><i class="fa-solid fa-barcode-read"></i> Boleto</p>
+        <strong>10%</strong>
+      </span>
+      <span class="line flex justify-between align-center">
+        <p><i class="fa-brands fa-pix"></i> PIX</p>
+        <strong>50%</strong>
+      </span>
+    </article>
+    <article>
+      <header>
+        <strong>Gateways com maior aprovação</strong>
+      </header>
+      <span class="line flex justify-between align-center">
+        <p><i class="square" style="background: #367AD3"></i> AppMax</p>
+        <strong>50%</strong>
+      </span>
+      <span class="line flex justify-between align-center">
+        <p><i class="square" style="background: #00A859"></i>  Mercado Pago</p>
+        <strong>30%</strong>
+      </span>
+      <span class="line flex justify-between align-center">
+        <p><i class="square" style="background: #78D578"></i> Pagar.me</p>
+        <strong>20%</strong>
+      </span>
+    </article>
+  </section>
+  <!-- /.stats-bottom -->
+
+  <div class="dashboard-help flex justify-between align-center">
+    <h4><i class="fa-light fa-headphones-simple"></i> Central de Ajuda</h4>
+    <p>Possui dúvidas sobre algo da TratsFy? Visite nossa central de ajuda completa.</p>
+    <span><a href="">Acessar <i class="fa-regular fa-arrow-up-right"></i></a></span>
+  </div>
+  <!-- /.dashboard-help -->
+
+</main>
+<!-- /#main -->
+  
+<!--scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+</body>
+
+</html>

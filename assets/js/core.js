@@ -1,10 +1,30 @@
 $(document).ready(function(){
 
+  /* Checkout Animate */
   setTimeout(function(){
     $('#checkout').addClass('on')
   }, 1000)
 
-  /* metodo pagamento */
+  /* Menu */
+  $('#header .right span.menu').click(function(){
+    $('#sidebar').toggleClass('on')
+  })
+
+  /* Graph */
+  $('.chart-bar').each(function(){
+    var height = $(this).find('.bar').attr('ref')
+    $(this).find('.bar').attr('style', 'height: ' + height)
+    console.log(height)
+  })
+
+  /* Sidebar */
+  $('#sidebar nav ul li a.sub').click(function(){
+    $(this).toggleClass('on')
+    $(this).parent().find('ul').slideToggle()
+    return false
+  })
+
+  /* Método de Pagamento */
   $('.metodo-pagamento span').click(function(){
     $('.metodo-pagamento span').removeClass('active')
     $(this).addClass('active')
@@ -21,7 +41,7 @@ $(document).ready(function(){
   })
 
   // View Password
-    $('.right').on('click', function () {
+    $('.form-float .right').on('click', function () {
         const $passwordInput = $(this).siblings('.pwd'); 
         const currentType = $passwordInput.attr('type');
         
