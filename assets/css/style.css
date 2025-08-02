@@ -270,8 +270,8 @@ input[type=submit], button { transition: all .5s ease; }
 #header .right nav ul { padding: 10px 20px; }
 #header .right nav ul li a { display: block; padding: 10px 0px; color: #718096; font-size: 13px; }
 #header .right nav ul li a:hover { color: var(--green2); }
-#header .right nav ul li:last-of-type a { border-top: 1px solid #eee; color: var(--red); }
-#header .right nav ul li a i { width: 30px; text-align: center; font-size: 16px; }
+#header .right nav ul li:last-of-type a { margin-top: 10px; padding-top: 20px; border-top: 1px solid #eee; color: var(--red); }
+#header .right nav ul li a i { width: 20px; text-align: center; font-size: 16px; }
 #header .right span.menu { display: none; font-size: 20px; cursor: pointer; }
 
 /* sidebar */
