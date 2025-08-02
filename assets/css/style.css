@@ -248,13 +248,30 @@ input[type=submit], button { transition: all .5s ease; }
   .ff-half section { width: 100%; }
 
 /* header */
-#header { position: fixed; top: 0px; left: 0px; width: 100%; height: 60px; padding: 0px 20px; background-color: #fcfcfc; box-shadow: 0px 16px 32px rgba(0,0,0,.1); }
+#header { position: fixed; z-index: 1000; top: 0px; left: 0px; width: 100%; height: 60px; padding: 0px 20px; background-color: #fcfcfc; box-shadow: 0px 16px 32px rgba(0,0,0,.1); }
 #header h1 a { font-weight: 700; font-size: 30px; color: var(--green2); }
-#header .right { display: flex; gap: 24px; align-items: center; }
+#header .right { position: relative; display: flex; gap: 24px; align-items: center; }
 #header .right span.help a { display: block; width: auto; height: 34px; padding: 0px 12px; background-color: #F6F6F9; color: var(--primary); border: 1px solid #DDDDE3; box-shadow: 0px 1px 2px rgba(0,0,0,.4); border-radius: 6px; font-size: 12px; line-height: 32px; }
 #header .right span.help a:hover { background-color: var(--primary); color: #fff; }
 #header .right span.help a i { margin-right: 7px; }
-#header .right span.avatar a { display: block; width: 48px; height: 48px; border-radius: 100%; background-color: #C4E8D1; color: #FCFCFC; text-align: center; line-height: 48px; font-size: 24px; }
+#header .right .avatar span.icon { display: block; width: 40px; height: 40px; border-radius: 100%; background-color: #C4E8D1; color: #FCFCFC; text-align: center; line-height: 40px; font-size: 20px; cursor: pointer; transition: all .3s ease; }
+#header .right .avatar span.icon:hover { background-color: var(--green2); }
+#header .right .avatar:hover nav { display: block; }
+#header .right nav { display: none; position: absolute; z-index: 200; top: 50px; right: 0px; width: 250px; height: auto; border-radius: 30px; box-shadow: 0px 10px 10px rgba(0,0,0,.1); background-color: #fff; }
+#header .right nav::before { position: absolute; top: -20px; left: 0px; width: 100%; height: 20px; background-color: transparent; content: '';   }
+#header .right nav .menu-info { display: flex; align-items: center; width: 100%; padding: 20px; background-color: #eee; border-top-left-radius: 30px; border-top-right-radius: 30px; }
+#header .right nav .menu-info figure { width: 40px; height: 40px; border-radius: 100%; background-color: #C4E8D1; color: #FCFCFC; text-align: center; line-height: 40px; font-size: 20px; }
+#header .right nav .menu-info figcaption { width: calc(100% - 40px); padding-left: 20px; }
+#header .right nav .menu-info figcaption strong { display: block; font-weight: bold; font-size: 14px; }
+#header .right nav .menu-info figcaption span.mail a { display: block; margin: 5px 0px; color: #666; font-size: 13px; }
+#header .right nav .menu-info figcaption span.status { display: inline-block; padding: 5px 10px; font-weight: bold; font-size: 10px; text-transform: uppercase; border-radius: 20px; color: #fff; }
+#header .right nav .menu-info figcaption span.status.s-nao-aprovado { background-color: #fec00b; }
+#header .right nav .menu-info figcaption span.status.s-aprovado { background-color: var(--green2); }
+#header .right nav ul { padding: 10px 20px; }
+#header .right nav ul li a { display: block; padding: 10px 0px; color: #718096; font-size: 13px; }
+#header .right nav ul li a:hover { color: var(--green2); }
+#header .right nav ul li:last-of-type a { border-top: 1px solid #eee; color: var(--red); }
+#header .right nav ul li a i { width: 30px; text-align: center; font-size: 16px; }
 #header .right span.menu { display: none; font-size: 20px; cursor: pointer; }
 
 /* sidebar */
@@ -262,7 +279,7 @@ input[type=submit], button { transition: all .5s ease; }
 #sidebar.on { left: 0px; }
 #sidebar nav ul li a { display: block; padding: 12px 0px; font-weight: 500; font-size: 14px; color: #fff; }
 #sidebar nav ul li a i { display: inline-block; width: 30px; text-align: center; vertical-align: middle; font-size: 16px; }
-#sidebar nav ul li a:hover { opacity: .7; }
+#sidebar nav ul li a:hover { color: var(--green2); }
 #sidebar nav ul li a.active { color: var(--green2); }
 #sidebar nav ul li a.sub { position: relative; }
 #sidebar nav ul li a.sub::after { position: absolute; top: 12px; right: 30px; font-weight: bold; font-family: 'Font Awesome 6 Pro'; font-size: 12px; content: '\f078'; }
@@ -275,16 +292,17 @@ input[type=submit], button { transition: all .5s ease; }
 
   /* main -> header */
   #main header.head { display: block; margin-bottom: 40px; }
-  #main header.head h2 { display: block; font-weight: bold; font-size: 40px; }
+  #main header.head h2 { display: block; font-weight: bold; font-size: 30px; }
   #main header.head h2 i { color: var(--green2); }
   #main header.head p { display: block; margin-top: 15px; color: var(--primary2); line-height: 1.4; }
 
   /* main -> stats */
   #main .stats { grid-gap: 24px; }
-  #main .stats article { padding: 20px; background-color: #fcfcfc; border-radius: 12px; box-shadow: 0px 4px 6px rgba(0,0,0,.1); }
-  #main .stats article header strong { font-size: 16px; color: #193B2D; }
+  #main .stats article { padding: 15px 20px 20px; background-color: #fcfcfc; border-radius: 12px; box-shadow: 0px 4px 6px rgba(0,0,0,.1); transition: all .3s ease; }
+  #main .stats article:hover { transform: scale(1.03); }
+  #main .stats article header strong { font-size: 14px; color: #193B2D; }
   #main .stats article header i { width: 32px; height: 32px; background-color: #E6F6EB; border: 1px solid var(--green2); border-radius: 100%; color: var(--green); line-height: 30px; text-align: center; }
-  #main .stats article span.price { display: block; margin: 16px 0px 24px 0px; font-weight: bold; font-size: 32px; }
+  #main .stats article span.price { display: block; margin: 16px 0px 24px 0px; font-weight: bold; font-size: 24px; }
   #main .stats article small { display: block; font-size: 14px; color: var(--green2); }
   #main .stats article small.no { color: var(--red); }
 
@@ -298,12 +316,12 @@ input[type=submit], button { transition: all .5s ease; }
   #main .stats-middle article.user .user-info figure { width: 48px; height: 48px; border-radius: 100%; overflow: hidden; }
   #main .stats-middle article.user .user-info figure img { width: 100%; height: 100%; object-fit: cover; }
   #main .stats-middle article.user .user-info figcaption { display: flex; flex-direction: column; }
-  #main .stats-middle article.user .user-info figcaption strong { display: block; color: #193B2D; text-transform: uppercase; }
+  #main .stats-middle article.user .user-info figcaption strong { display: block; color: #193B2D; text-transform: uppercase; font-size: 14px; }
   #main .stats-middle article.user .user-info figcaption h6 { display: block; margin: 7px 0px; font-weight: bold; font-size: 20px; }
   #main .stats-middle article.user .user-info figcaption span a { display: block; color: #193B2D; }
   #main .stats-middle article.user span.wp a { position: absolute; bottom: 20px; left: 20px; width: calc(100% - 40px); height: 40px; border-radius: 6px; background-color: var(--green2); font-weight: 600; color: #fff; text-align: center; line-height: 38px; }
   #main .stats-middle article.user span.wp a i { display: inline-block; margin-right: 7px; font-size: 18px; vertical-align: middle; }
-  #main .stats-middle article.user span.wp a:hover { background-color: #193B2D; }
+  #main .stats-middle article.user span.wp a:hover { background-color: #193B2D; transform: scale(1.03); }
   #main .stats-middle article.win { height: 220px; background-color: #132D21; border: 1px solid #2F7C57; }
   #main .stats-middle article.win header { gap: 20px; }
   #main .stats-middle article.win header i { font-size: 30px; color: #fff; }
@@ -311,11 +329,12 @@ input[type=submit], button { transition: all .5s ease; }
   #main .stats-middle article.win p { display: block; margin: 20px 0px; color: #ADB1B8; line-height: 1.4; }
   #main .stats-middle article.win span a { position: absolute; bottom: 20px; left: 20px; width: calc(100% - 40px); height: 40px; border-radius: 6px; background-color: var(--green2); font-weight: 600; color: #fff; text-align: center; line-height: 38px; }
   #main .stats-middle article.win span a i { display: inline-block; vertical-align: middle; margin-left: 10px; }
-  #main .stats-middle article.win span a:hover { background-color: #2c5f4a; }
+  #main .stats-middle article.win span a:hover { background-color: #2c5f4a; transform: scale(1.03); }
 
   /* main -> stats bottom */
   #main .stats-bottom { margin-top: 24px; grid-gap: 24px; }
-  #main .stats-bottom article { padding: 20px; background-color: #F6F6F9; border: 1px solid #B9BBC6; border-radius: 12px; box-shadow: 0px 4px 6px rgba(0,0,0,.1); }
+  #main .stats-bottom article { padding: 20px; background-color: #F6F6F9; border: 1px solid #B9BBC6; border-radius: 12px; box-shadow: 0px 4px 6px rgba(0,0,0,.1); transition: all .3s ease; }
+  #main .stats-bottom article:hover { transform: scale(1.03); }
   #main .stats-bottom article header strong { display: block; margin-bottom: 20px; font-size: 16px; color: #193B2D; }
   #main .stats-bottom article span.line { padding: 10px 0px; border-bottom: 1px solid #DDDDE3; }
   #main .stats-bottom article span.line:last-of-type { border-bottom: none; }
@@ -344,7 +363,7 @@ input[type=submit], button { transition: all .5s ease; }
 .dashboard-help h4 i { margin-right: 5px; font-size: 24px; }
 .dashboard-help p { padding: 0px 20px; color: #5C5F66; line-height: 1.4; }
 .dashboard-help span a { padding: 10px 15px; background-color: var(--green2); color: #fff; border-radius: 6px; font-weight: 500; white-space: nowrap; }
-.dashboard-help span a:hover { background-color: var(--green); }
+.dashboard-help span a:hover { background-color: var(--green); transform: scale(1.03); }
 .dashboard-help span a i { margin-left: 5px; }
 
 /* responsive */
