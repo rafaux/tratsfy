@@ -1,0 +1,215 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+<title>Tratsfy</title>
+<!-- stylesheets -->
+<link rel="stylesheet" href="assets/css/style.css" />
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v6.0.0-beta3/css/all.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link  rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" />
+<link rel="icon" href="assets/img/favicon.svg" />
+</head>
+
+<body class="dash">
+
+<header id="header" class="flex justify-between align-center">
+  <h1><a href="dashboard.html">TratsFy</a></h1>
+  <div class="right">
+    <span class="help"><a href="central-de-ajuda.html"><i class="fa-solid fa-question"></i>Central de Ajuda</a></span>
+    <div class="avatar">
+      <span class="icon"><i class="fa-solid fa-user"></i></span>
+      <nav>
+        <div class="menu-info">
+          <figure><i class="fa-solid fa-user"></i></figure>
+          <figcaption>
+            <strong>Rafa Ux</strong>
+            <span class="mail"><a href="mailto:rafaux7@gmail.com">rafaux7@gmail.com</a></span>
+            <span class="status s-nao-aprovado">Não aprovado</span>
+          </figcaption>
+        </div>
+        <ul>
+          <li><a href="meu-perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a></li>
+          <li><a href="faturas.html"><i class="fa-solid fa-file-invoice"></i> Faturas</a></li>
+          <li><a href="credenciais.html"><i class="fa-solid fa-key"></i> Credenciais e API</a></li>
+          <li><a href="sair.html"><i class="fa-solid fa-right-from-bracket"></i> Sair</a></li>
+        </ul>
+      </nav>
+    </div>
+    <span class="menu"><i class="fa-regular fa-bars"></i></span>
+  </div>
+</header>
+<!-- /#header -->
+
+<aside id="sidebar">
+  <nav>
+    <ul>
+      <li><a href="dashboard.html"><i class="fa-regular fa-house"></i> Painel</a></li>
+      <li>
+        <a href="minha-conta.html" class="sub"><i class="fa-regular fa-circle-user"></i> Minha Conta</a>
+        <ul>
+          <li><a href="minha-conta-meu-perfil.html"><i class="fa-solid fa-user"></i> Meu Perfil</a></li>
+          <li><a href="minha-conta-minhas-faturas.html"><i class="fa-regular fa-file-lines"></i> Minhas Faturas</a></li>
+        </ul>
+      </li>
+      <li><a href="indique-ganhe.html"><i class="fa-regular fa-circle-dollar"></i> Indique e Ganhe</a></li>
+      <li>
+        <a href="produtos.html" class="sub"><i class="fa-regular fa-layer-group"></i> Produtos</a>
+        <ul>
+          <li><a href="produtos-criar-produto.html"><i class="fa-regular fa-folder-plus"></i> Criar Produto</a></li>
+          <li><a href="produtos-meus-produtos.html"><i class="fa-solid fa-folder-open"></i> Meus Produtos</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="afiliados.html" class="sub"><i class="fa-regular fa-megaphone"></i> Afiliados</a>
+        <ul>
+          <li><a href="afiliados-configuracoes-gerais.html"><i class="fa-regular fa-megaphone"></i> Configurações Gerais</a></li>
+          <li><a href="afiliados-solicitacoes-saque.html"><i class="fa-regular fa-money-from-bracket"></i> Solicitações de Saque</a></li>
+          <li><a href="afiliados-meus-afiliados.html"><i class="fa-light fa-users"></i> Meus Afiliados</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="links-pagamento.html" class="sub"><i class="fa-regular fa-link"></i> Links de Pagamento</a>
+        <ul>
+          <li><a href="links-pagamento-gerar.html"><i class="fa-light fa-up-to-line"></i> Gerar Links</a></li>
+          <li><a href="links-pagamento-configuracoes.html"><i class="fa-regular fa-sliders-simple"></i> Configurações de Links</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="vendas.html" class="sub"><i class="fa-regular fa-wallet"></i> Vendas</a>
+        <ul>
+          <li><a href="vendas-todas-as-vendas.html"><i class="fa-regular fa-list-check"></i> Todas as Vendas</a></li>
+          <li><a href="vendas-carrinhos-abandonados.html"><i class="fa-regular fa-cart-shopping"></i> Carrinhos Abandonados</a></li>
+        </ul>
+      </li>
+      <li><a href="relatorios.html"><i class="fa-light fa-chart-pie"></i> Relatórios</a></li>
+      <li><a href="ferramentas.html"><i class="fa-light fa-wrench"></i> Ferramentas</a></li>
+      <li>
+        <a href="configuracoes-gerais.html" class="sub"><i class="fa-light fa-gears"></i>Configurações Gerais</a>
+        <ul>
+          <li><a href="configuracoes-gerais-checkout.html"><i class="fa-solid fa-qrcode"></i> Checkout</a></li>
+          <li><a href="configuracoes-gerais-dados-suporte.html"><i class="fa-regular fa-life-ring"></i> Dados de Suporte</a></li>
+          <li><a href="configuracoes-gerais-emails-transacionais.html"><i class="fa-light fa-envelope"></i> E-mails Transacionais</a></li>
+          <li><a href="configuracoes-gerais-meios-pagamento.html"><i class="fa-light fa-credit-card"></i> Meios de Pagamento</a></li>
+          <li><a href="configuracoes-gerais-colaboradores.html"><i class="fa-light fa-user-group"></i> Colaboradores</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</aside>
+<!-- /#sidebar -->
+
+<main id="main">
+
+  <header class="head">
+    <h2>Faturas e Assinaturas</h2>
+    <p>Abaixo você pode conferir as suas faturas por usar a TratsFy, conhecer o que você já assinou e os serviços adicionais que contratou.</p>
+  </header>
+
+  <div class="faturas flex">
+    <aside>
+      <nav>
+        <ul class="flex flex-col">
+          <li><a href="" class="active"><i class="fa-solid fa-money-check-dollar"></i> Fatura Atual</a></li>
+          <li><a href=""><i class="fa-solid fa-credit-card"></i> Dados de Cobrança</a></li>
+          <li><a href=""><i class="fa-solid fa-clock-rotate-left"></i> Faturas Antigas</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <section>
+      <header>
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <h3>Fatura Atual</h3>
+        <p>Confira abaixo a fatura atual de sua conta, baseado nas suas últimas transações.</p>
+      </header>
+      <div class="grid grid-2">
+        <div class="card">
+          <h4>Suas informações:</h4>
+          <div class="card-list flex flex-col">
+            <span class="flex justify-between align-center">
+              <p>Nome:</p>
+              <strong>Rafa Ux</strong>
+            </span>
+            <span class="flex justify-between align-center">
+              <p>CPF:</p>
+              <strong>Não informado</strong>
+            </span>
+            <span class="flex justify-between align-center">
+              <p>Taxa por venda:</p>
+              <strong>2.99%</strong>
+            </span>
+            <span class="flex justify-between align-center">
+              <p>Período de Cobrança:</p>
+              <strong>Semanal</strong>
+            </span>
+            <span class="flex justify-between align-center">
+              <p>Status da Conta:</p>
+              <strong class="status pendente">Pendente</strong>
+            </span>
+          </div>
+        </div>
+        <div class="card opened">
+          <small>Fatura em aberto:</small>
+          <strong>R$ 0,00</strong>
+          <p>A cobrança automática ocorrerá em: <b>11/08/2025</b></p>
+        </div>
+        <div class="card">
+          <h4>Detalhamento da Cobrança</h4>
+          <div class="table">
+            <span class="column">
+              <strong>Descrição</strong>
+              <span>
+                <p>Valor referente às transações aprovadas</p>
+                <small>Período: 24/07/2025 a 05/08/2025</small>
+              </span>
+            </span>
+            <span class="column">
+              <strong>Você vendeu</strong>
+              <span>
+                <p>R$ 0,00</p>
+              </span>
+            </span>
+            <span class="column">
+              <strong>Taxas</strong>
+              <span>
+                <p>R$ 0,00</p>
+              </span>
+            </span>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Serviços Adicionais</h4>
+          <div class="table">
+            <span class="column">
+              <strong>Serviço</strong>
+            </span>
+            <span class="column">
+              <strong>Quantidade</strong>
+            </span>
+            <span class="column">
+              <strong>Valor</strong>
+            </span>
+          </div>
+          <span class="no-item"><i class="fa-solid fa-inbox"></i> Nenhum serviço adicional utilizado</span>
+        </div>
+      </div>
+    </section>
+  </div>
+  <!-- /#faturas -->
+
+</main>
+<!-- /#main -->
+  
+<!--scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+</body>
+
+</html>
